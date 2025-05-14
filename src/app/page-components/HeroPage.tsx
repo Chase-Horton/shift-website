@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { LogoSection } from "./components/LogoSection";
 import { MembershipSection } from "./components/MembershipsSection";
+import { ContactForm} from "./components/ContactSection";
 
 export const Hero = () => {
     return (
@@ -40,6 +41,7 @@ export const Hero = () => {
             </section>
             <LogoSection href="./images/Shift-Logo-Primary.jpg">Shift is a member-driven, private country club for auto enthusiasts.</LogoSection>
             <MembershipSection />
+            <ContactForm />
         </>
     )
 }
