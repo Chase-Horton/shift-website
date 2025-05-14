@@ -30,5 +30,6 @@ body {
   width: 100%;
 }
 .gm-style-pbc {
-opacity: 0 !important;
+    z-index: 5 !important;
+    pointer-events: none;
 }
