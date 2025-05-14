@@ -1,7 +1,7 @@
 export const MembershipCard = ({nameShort, description, price, lis}: {nameShort:string, description:string, price:number, lis:string[]}) => (
-    <div className="rounded-lg max-w-xs overflow-hidden shadow-lg">
-        <div className="flex flex-col items-center bg-gray-400 px-4 py-3 text-white">
-            <h2 className="text-2xl font-medium">{nameShort}</h2>
+    <div className="rounded-lg max-w-xs overflow-hidden shadow-lg bg-white">
+        <div className="flex flex-col items-center bg-[#BEBEBE] px-4 py-3 text-white">
+            <h2 className="text-3xl font-medium">{nameShort}</h2>
             <p className="text-xs">{description}</p>
         </div>
         <div className="flex flex-col items-center border-b border-gray-600">
@@ -10,7 +10,7 @@ export const MembershipCard = ({nameShort, description, price, lis}: {nameShort:
         <div className="p-4">
             <ul className="text-sm space-y-2 text-gray-800 flex flex-col items-center">
                 {lis.map((li, i)=>(
-                    <li key={i} className="list-disc list-inside text-blue-400">
+                    <li key={i} className="text-center list-disc list-inside text-blue-400">
                         <span className="text-xs text-gray-800">{li}</span>
                     </li>
                 ))}
