@@ -25,3 +25,10 @@ body {
   color: var(--foreground);
   font-family: var(--font-arial);
 }
+.map-container {
+  height: 400px;
+  width: 100%;
+}
+.gm-style-pbc {
+opacity: 0 !important;
+}
