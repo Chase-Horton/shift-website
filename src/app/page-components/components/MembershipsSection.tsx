@@ -4,7 +4,7 @@ export const MembershipSection = () => {
     let key = 0
     let cards = [
         {
-            nameShort: "Social",
+            nameShort: "SOCIAL",
             description: 'Social Membership',
             price: 75,
             lis: [
@@ -20,7 +20,7 @@ export const MembershipSection = () => {
             ]
         },
         {
-            nameShort: 'Moto',
+            nameShort: 'MOTO',
             description: 'Motorcycle Storage',
             price: 150,
             lis: [
@@ -39,7 +39,7 @@ export const MembershipSection = () => {
             ]
         },
         {
-            nameShort: 'Single Auto',
+            nameShort: 'SINGLE AUTO',
             description: 'Underground Storage',
             price: 275,
             lis: [
@@ -58,7 +58,7 @@ export const MembershipSection = () => {
             ]
         },
         {
-            nameShort: '2 Auto',
+            nameShort: '2 AUTO',
             description: '4-Post Lifted Storage',
             price: 425,
             lis: [
@@ -77,7 +77,7 @@ export const MembershipSection = () => {
             ]
         },
         {
-            nameShort: '2 Auto Buddy',
+            nameShort: '2 AUTO BUDDY',
             description: 'Shared 4-Post Lifted Storage',
             price: 500,
             lis: [
@@ -97,7 +97,7 @@ export const MembershipSection = () => {
         },
     ]
     return (
-        <section className="bg-red-500 py-4">
+        <section className="bg-red-500 py-8">
             <div className="flex flex-row gap-4 justify-center">
                 {cards.map(section => (
                     <MembershipCard

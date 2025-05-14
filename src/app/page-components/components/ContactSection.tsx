@@ -18,6 +18,7 @@ export function ContactForm() {
   return (
     <section className={`w-full py-8 ${openSans.className} bg-white`}>
       <form onSubmit={handleSubmit} className="w-full max-w-7xl mx-auto px-4">
+        <h1 className="text-left text-2xl mb-4">Interested? Questions? Contact Us:</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div>
             <input
