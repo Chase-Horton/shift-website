@@ -1,7 +1,10 @@
 import Image from "next/image";
+import { LogoSection } from "./components/LogoSection";
 
 export const Hero = () =>
 (
+    <>
+    {/* Fixed Image Part */}
     <section className="relative h-screen w-full overflow-hidden">
         {/* Background Image */}
         <div className="fixed inset-0 -z-10">
@@ -12,15 +15,14 @@ export const Hero = () =>
             className="object-cover"
             priority
             />
-            {/* Optional dark overlay */}
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-black/50" />
         </div>
 
         {/* Centered Logo */}
         <div className="flex items-center justify-center h-full">
             <Image
                 src="/images/Shift-Logo-Tertiary.png" 
-                alt="Shift Auto Society Logo"
+                alt="Shift Auto Society Logo with Transparent Background"
                 width={400}
                 height={400}
                 className="object-contain drop-shadow-lg"
@@ -32,4 +34,7 @@ export const Hero = () =>
             Scroll Down ↓
         </div>
     </section>
+    <LogoSection href="./images/Shift-Logo-Primary.jpg">Shift is a member-driven, private country club for auto enthusiasts.</LogoSection>
+    <section className="h-[100vh] bg-red-500" />
+    </>
 )
