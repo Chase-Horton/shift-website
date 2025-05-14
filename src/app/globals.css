@@ -10,6 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-open-sans);
   --font-mono: var(--font-geist-mono);
+  --font-arial: Arial, sans-serif;
 }
 
 /*@media (prefers-color-scheme: dark) {
@@ -22,4 +23,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-arial);
 }
