@@ -10,11 +10,11 @@ export const LogoSection = () => (
         <img
           src="./images/Shift-Logo-Primary.jpg"
           alt="Primary Shift Auto Society Logo"
-          className="hidden md:block w-auto h-auto md:max-h-[330px] object-contain"
+          className="hidden md:block w-auto h-auto md:max-h-[330px] object-contain animate-slide-in"
         />
       </div>
       <div className={`w-full md:w-[40%] text-center md:text-left pl-4 pb-[10px] text-xl md:text-[24px] antialias font-[440] text-gray-700 ${openSans.className}`}>
-        <p className="text-center">Shift is a member-driven, private country club for auto enthusiasts.</p>
+        <p className="text-center animate-slide-up">Shift is a member-driven, private country club for auto enthusiasts.</p>
       </div>
     </div>
   </div>

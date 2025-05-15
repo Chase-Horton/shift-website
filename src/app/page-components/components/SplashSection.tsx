@@ -26,11 +26,13 @@ export const SplashSection = () =>
                     />
                 </div>
 
-                {/* Placeholder */}
+                {/* Chevron */}
                 <div className="absolute bottom-4 w-full text-center text-white text-sm opacity-80 animate-bounce">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor"  className="w-8 h-8 mx-auto">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
                     </svg>
                 </div>
+                {/* black background */}
+                <div className="absolute inset-0 bg-black animate-fade"/>
             </div>
 )

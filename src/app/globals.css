@@ -13,6 +13,73 @@
   --font-arial: Arial, sans-serif;
 }
 
+@theme {
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  --animate-fade: fadeOut 2s ease-out forwards;
+  --animate-slide-in: slideIn .7s ease-out forwards;
+  --animate-slide-up: slideUp .7s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 0
+  }
+}
+
+;
+
+@keyframes wiggle {
+
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+
+  50% {
+    transform: rotate(3deg);
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity:1;
+  }
+}
+@keyframes carZoomInBrake {
+  0% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(20%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /*@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -25,11 +92,13 @@ body {
   color: var(--foreground);
   font-family: var(--font-arial);
 }
+
 .map-container {
   height: 400px;
   width: 100%;
 }
+
 .gm-style-pbc {
-    z-index: 5 !important;
-    pointer-events: none;
+  z-index: 5 !important;
+  pointer-events: none;
 }

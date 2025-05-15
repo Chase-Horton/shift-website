@@ -19,22 +19,24 @@ function Map() {
     }), [])
 
     return (
-        <GoogleMap
-            zoom={12}
-            center={shiftLocation}
-            mapContainerClassName="map-container"
-            options={{
-                fullscreenControl: false,
-                mapTypeControl: false,
-            }}
-        >
-            <Marker position={shiftLocation} />
-            <div className="absolute top-4 left-4 bg-white p-3 rounded-md shadow-md z-10 max-w-[250px]">
-                <h3 className="font-bold text-sm">{businessInfo.name}</h3>
-                <p className="text-xs mt-1">{businessInfo.address}</p>
-                <p className="text-xs mt-1">{businessInfo.phone}</p>
-                <p className="text-xs mt-1">{businessInfo.hours}</p>
-            </div>
-        </GoogleMap>
+        <div className="relative w-full">
+            <GoogleMap
+                zoom={12}
+                center={shiftLocation}
+                mapContainerClassName="map-container"
+                options={{
+                    fullscreenControl: false,
+                    mapTypeControl: false,
+                }}
+            >
+                <Marker position={shiftLocation} />
+                <div className="absolute top-4 left-4 bg-white p-3 rounded-md shadow-md z-10 max-w-[250px]">
+                    <h3 className="font-bold text-sm">{businessInfo.name}</h3>
+                    <p className="text-xs mt-1">{businessInfo.address}</p>
+                    <p className="text-xs mt-1">{businessInfo.phone}</p>
+                    <p className="text-xs mt-1">{businessInfo.hours}</p>
+                </div>
+            </GoogleMap>
+        </div>
     );
 }
