@@ -99,7 +99,7 @@ export const MembershipSection = () => {
     return (
         <div className="bg-red-500 py-8">
             <motion.div
-                className="flex flex-row gap-4 justify-center"
+                className="flex flex-col md:flex-row gap-4 justify-center items-center md:items-stretch"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}

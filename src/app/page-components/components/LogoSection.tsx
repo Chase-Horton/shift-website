@@ -2,7 +2,7 @@ import * as motion from "motion/react-client"
 export const LogoSection = () => (
   <div className="relative z-10 bg-white text-black w-full py-8">
     <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl mx-auto px-4 md:gap-8">
-      <div className="mb-6 md:mb-0">
+      <div className="md:mb-0">
         <motion.img
           src="./images/Shift-Logo-Primary.jpg"
           alt="Primary Shift Auto Society Logo"
