@@ -3,6 +3,7 @@ import { Open_Sans } from "next/font/google"
 import { useForm } from "react-hook-form"
 import { ContactFormFields, ContactFormSchema, } from "./schemas"
 import { zodResolver } from "@hookform/resolvers/zod"
+import { ContactOnSubmit } from "./ServerActions"
 
 const openSans = Open_Sans({subsets: ["latin"]})
 export function ContactForm() {
@@ -13,17 +14,14 @@ export function ContactForm() {
   } = useForm<ContactFormFields>({
     resolver: zodResolver(ContactFormSchema)
   })
-  const onSubmit = (data:ContactFormFields) => {
-    console.log(data)
-  }
   return (
     <section className={`w-full py-8 ${openSans.className} bg-white`}>
-      <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-7xl mx-auto px-4">
+      <form onSubmit={handleSubmit(ContactOnSubmit)} className="w-full max-w-7xl mx-auto px-4">
         <h1 className="text-left text-2xl mb-4">Interested? Questions? Contact Us:</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div>
             <input
-              id="name"
+              id="fullname"
               type="text"
               placeholder="Name"
               className="w-full p-3 bg-gray-100 rounded border-0 focus:ring-2 focus:ring-[#e32c22] focus:ring-opacity-20 transition-all outline-none"
