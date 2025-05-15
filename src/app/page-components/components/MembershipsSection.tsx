@@ -97,7 +97,7 @@ export const MembershipSection = () => {
         },
     ]
     return (
-        <section className="bg-red-500 py-8">
+        <div className="bg-red-500 py-8">
             <div className="flex flex-row gap-4 justify-center">
                 {cards.map(section => (
                     <MembershipCard
@@ -109,6 +109,6 @@ export const MembershipSection = () => {
                     />
                 ))}
             </div>
-        </section>
+        </div>
     )
 }

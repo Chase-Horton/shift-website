@@ -1,7 +1,7 @@
 import Image from "next/image"
 export const SplashSection = () => 
 (
-            <section className="relative h-screen w-full overflow-hidden">
+            <div className="relative h-screen w-full overflow-hidden">
                 {/* Background Image */}
                 <div className="fixed inset-0 -z-10">
                     <Image
@@ -22,6 +22,7 @@ export const SplashSection = () =>
                         width={400}
                         height={400}
                         className="object-contain drop-shadow-lg"
+                        priority
                     />
                 </div>
 
@@ -30,7 +31,6 @@ export const SplashSection = () =>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor"  className="w-8 h-8 mx-auto">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
                     </svg>
-
                 </div>
-            </section>
+            </div>
 )

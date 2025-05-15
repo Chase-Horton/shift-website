@@ -4,7 +4,7 @@ const openSans = Open_Sans({
   subsets: ["latin"],
 })
 export const LogoSection = () => (
-   <section className="relative z-10 bg-white text-black w-full py-8">
+   <div className="relative z-10 bg-white text-black w-full py-8">
     <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl mx-auto px-4 md:gap-8">
       <div className="mb-6 md:mb-0">
         <img
@@ -17,5 +17,5 @@ export const LogoSection = () => (
         <p className="text-center">Shift is a member-driven, private country club for auto enthusiasts.</p>
       </div>
     </div>
-  </section>
+  </div>
 )

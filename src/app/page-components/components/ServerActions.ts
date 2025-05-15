@@ -11,8 +11,9 @@ export const ContactOnSubmit = async (data: ContactFormFields) => {
             pass: process.env.SMTP_PASS,
         },
     })
+    //todo: return not found if honeypot
     const send = async () => {
-        const info = await transporter.sendMail({
+        await transporter.sendMail({
             from: `"${data.name}" <shift@chase-horton.com>`,
             to: "admin@chase-horton.com",
             subject: `Inquiry from - ${data.email}`,

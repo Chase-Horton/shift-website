@@ -2,11 +2,11 @@ import { Open_Sans } from "next/font/google"
 const openSans = Open_Sans({subsets: ["latin"]})
 export const MembershipCard = ({nameShort, description, price, lis}: {nameShort:string, description:string, price:number, lis:string[]}) => (
     <div className={`rounded-lg max-w-xs overflow-hidden shadow-lg bg-white ${openSans.className}`}>
-        <div className="flex flex-col items-center bg-[#BEBEBE] px-4 py-3 text-white">
+        <div className="flex flex-col items-center bg-gray-400 px-4 py-3 text-white">
             <h2 className="text-3xl font-[370] capitalize">{nameShort}</h2>
             <p className="text-sm">{description}</p>
         </div>
-        <div className="flex flex-col items-center border-b border-gray-600">
+        <div className="flex flex-col items-center border-b border-gray-400">
             <p className="pt-4 pb-4"><span className="text-sm align-top">$</span><span className="text-5xl font-[300] text-shadow-lg text-shadow-gray-200">{price}</span>/month</p>
         </div>
         <div className="p-4">
