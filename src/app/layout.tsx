@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
-import { Geist_Mono} from "next/font/google";
 import "./globals.css";
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
+import { Open_Sans } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Shift Auto Society",
   description: "A country club for cars.",
 };
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+})
 
 export default function RootLayout({
   children,
@@ -21,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased`}
+        className={`antialiased ${openSans.className}`}
       >
         {children}
       </body>

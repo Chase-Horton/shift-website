@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { LogoSection } from "./components/LogoSection";
 import { MembershipSection } from "./components/MembershipsSection";
 import { ContactForm} from "./components/ContactSection";

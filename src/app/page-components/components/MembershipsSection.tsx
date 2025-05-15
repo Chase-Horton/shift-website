@@ -2,7 +2,7 @@ import { MembershipCard } from "./MembershipCard";
 import * as motion from "motion/react-client"
 export const MembershipSection = () => {
     let key = 0
-    let cards = [
+    const cards = [
         {
             nameShort: "SOCIAL",
             description: 'Social Membership',

@@ -2,8 +2,8 @@ This is a [Next.js](https://nextjs.org) project to recreate a wordpress website 
 
 ## Packages
 
-- Zod
-- Framer Motion
+- zod
+- motion
 - react-form-hook
 - nodemailer
 - react-google-maps/api

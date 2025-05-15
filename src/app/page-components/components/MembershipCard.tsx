@@ -1,9 +1,7 @@
-import { Open_Sans } from "next/font/google"
 import * as motion from "motion/react-client"
-const openSans = Open_Sans({ subsets: ["latin"] })
 export const MembershipCard = ({ nameShort, description, price, lis }: { nameShort: string, description: string, price: number, lis: string[] }) => (
     <motion.div
-        className={`rounded-lg max-w-xs h-full overflow-hidden shadow-lg bg-white ${openSans.className}`}
+        className={`rounded-lg max-w-xs h-full overflow-hidden shadow-lg bg-white`}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
         whileInView="visible"

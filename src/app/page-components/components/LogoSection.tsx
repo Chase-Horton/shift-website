@@ -1,8 +1,4 @@
-import { Open_Sans } from "next/font/google"
 import * as motion from "motion/react-client"
-const openSans = Open_Sans({
-  subsets: ["latin"],
-})
 export const LogoSection = () => (
   <div className="relative z-10 bg-white text-black w-full py-8">
     <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl mx-auto px-4 md:gap-8">
@@ -23,7 +19,7 @@ export const LogoSection = () => (
           }}
         />
       </div>
-      <div className={`w-full md:w-[40%] text-center md:text-left pl-4 pb-[10px] text-xl md:text-[24px] antialias font-[440] text-gray-700 ${openSans.className}`}>
+      <div className={`w-full md:w-[40%] text-center md:text-left pl-4 pb-[10px] text-xl md:text-[24px] antialias font-[440] text-gray-700`}>
         <motion.p
           className="text-center"
           viewport={{once: true, amount: .4}}
