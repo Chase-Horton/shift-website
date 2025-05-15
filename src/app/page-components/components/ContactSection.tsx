@@ -1,23 +1,24 @@
 "use client"
 import { Open_Sans } from "next/font/google"
-import { useState } from "react"
+import { useForm } from "react-hook-form"
+import { ContactFormFields, ContactFormSchema, } from "./schemas"
+import { zodResolver } from "@hookform/resolvers/zod"
 
 const openSans = Open_Sans({subsets: ["latin"]})
-
 export function ContactForm() {
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission logic here
-    console.log({ name, email, message })
+  const {
+    register,
+    handleSubmit: handleSubmit,
+    formState: {errors, },
+  } = useForm<ContactFormFields>({
+    resolver: zodResolver(ContactFormSchema)
+  })
+  const onSubmit = (data:ContactFormFields) => {
+    console.log(data)
   }
-
   return (
     <section className={`w-full py-8 ${openSans.className} bg-white`}>
-      <form onSubmit={handleSubmit} className="w-full max-w-7xl mx-auto px-4">
+      <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-7xl mx-auto px-4">
         <h1 className="text-left text-2xl mb-4">Interested? Questions? Contact Us:</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div>
@@ -26,10 +27,12 @@ export function ContactForm() {
               type="text"
               placeholder="Name"
               className="w-full p-3 bg-gray-100 rounded border-0 focus:ring-2 focus:ring-[#e32c22] focus:ring-opacity-20 transition-all outline-none"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
               required
+              {...register("name")}
             />
+            {errors.name && (
+              <p className="text-sm text-red-600 mt-1">{errors.name.message}</p>
+            )}
           </div>
           <div>
             <input
@@ -37,10 +40,12 @@ export function ContactForm() {
               type="email"
               placeholder="Email Address"
               className="w-full p-3 bg-gray-100 rounded border-0 focus:ring-2 focus:ring-[#e32c22] focus:ring-opacity-20 transition-all outline-none"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
               required
+              {...register("email")}
             />
+            {errors.email && (
+              <p className="text-sm text-red-600 mt-1">{errors.email.message}</p>
+            )}
           </div>
         </div>
 
@@ -50,10 +55,12 @@ export function ContactForm() {
             placeholder="Message"
             rows={5}
             className="w-full p-3 bg-gray-100 rounded border-0 focus:ring-2 focus:ring-[#e32c22] focus:ring-opacity-20 transition-all outline-none"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
             required
+            {...register("message")}
           />
+            {errors.message && (
+              <p className="text-sm text-red-600 mt-1">{errors.message.message}</p>
+            )}
         </div>
 
         <div className="flex justify-end">
