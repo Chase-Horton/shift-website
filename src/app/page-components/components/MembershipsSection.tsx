@@ -1,5 +1,5 @@
 import { MembershipCard } from "./MembershipCard";
-
+import * as motion from "motion/react-client"
 export const MembershipSection = () => {
     let key = 0
     let cards = [
@@ -98,17 +98,61 @@ export const MembershipSection = () => {
     ]
     return (
         <div className="bg-red-500 py-8">
-            <div className="flex flex-row gap-4 justify-center">
-                {cards.map(section => (
-                    <MembershipCard
-                        nameShort={section.nameShort}
-                        description={section.description}
-                        price={section.price}
-                        lis={section.lis}
-                        key={key++}
-                    />
+            <motion.div
+                className="flex flex-row gap-4 justify-center"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                    hidden: {},
+                    visible: {
+                        opacity: 1,
+                        transition: {
+                            duration: 0,
+                            when: "beforeChildren",
+                            staggerChildren: 0.2,
+                            staggerDirection: 1,
+                        }
+                    }
+                }}
+            >
+                {cards.map((section, index) => (
+                    <motion.div
+                        key={index}
+                        transition={{
+                            duration: 0.2,
+                            ease: "easeOut"
+                        }}
+                        variants={{
+                        hidden: { 
+                            opacity: 0, 
+                            scale: 0.8,
+                            y: 30,
+                            rotateZ: -2
+                        },
+                        visible: { 
+                            opacity: 1, 
+                            scale: 1,
+                            y: 0,
+                            rotateZ: 0,
+                            transition: {
+                                type: "spring",
+                                stiffness: 80,
+                                damping: 12
+                            }
+                        }
+                    }}
+                    >
+                        <MembershipCard
+                            nameShort={section.nameShort}
+                            description={section.description}
+                            price={section.price}
+                            lis={section.lis}
+                            key={key++}
+                        />
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </div>
     )
 }
