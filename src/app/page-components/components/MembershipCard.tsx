@@ -2,7 +2,7 @@
 import { motion } from "motion/react"
 import { useState } from "react"
 export const MembershipCard = ({ nameShort, description, price, lis }: { nameShort: string, description: string, price: number, lis: string[] }) => {
-    const [isHovered, setIsHovered] = useState(false)
+    const [, setIsHovered] = useState(false)
     const cardVariants = {
         hidden: { opacity: 0, y: 50 },
         visible: {
