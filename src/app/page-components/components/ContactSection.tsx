@@ -59,7 +59,7 @@ export function ContactForm() {
         <div className="flex justify-end">
           <button
             type="submit"
-            className="px-8 py-3 bg-[#e32c22] text-white font-medium rounded hover:bg-[#c52218] active:bg-[#a91e15] transition-colors duration-200"
+            className="px-8 py-3 bg-[#e32c22] text-white font-medium rounded hover:bg-[#c52218] active:bg-[#a91e15] hover:scale-105 ease-in-out duration-200"
           >
             Submit
           </button>
