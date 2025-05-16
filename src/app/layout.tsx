@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Open_Sans } from "next/font/google";
 import Script from "next/script";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Shift Auto Society",
@@ -19,16 +20,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <Script src="https://www.googletagmanager.com/gtag/js?id=G-CZVX0BPCSE" strategy="afterInteractive"></Script>
-    <Script id="google-analytics">
-      {`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      <Head>
+        <Script strategy="afterInteractive" data-domain="shift-website-kohl.vercel.app" src="https://plausible.io/js/script.outbound-links.js"/>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-CZVX0BPCSE" strategy="afterInteractive"></Script>
+        <Script id="google-analytics">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-      gtag('config', 'G-CZVX0BPCSE');
-      `}
-    </Script>
+          gtag('config', 'G-CZVX0BPCSE');
+          `}
+        </Script>
+      </Head>
       <body
         className={`antialiased ${openSans.className}`}
       >
